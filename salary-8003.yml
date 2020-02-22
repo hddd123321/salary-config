@@ -9,7 +9,7 @@ server:
 
 spring: 
   profiles: dev
-  applocation: 
+  application: 
     name: salary-server-3-dev
 
 info: 
@@ -31,7 +31,7 @@ server:
 
 spring: 
   profiles: test
-  applocation: 
+  application: 
     name: salary-server-3-test
 
 eureka: 
