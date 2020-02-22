@@ -1,47 +1,47 @@
-
-spring:
-    profiles:
-        active:
-            -dev
+spring: 
+  profiles: 
+    active: 
+     - dev
 
 ---
-server:
-    port: 8003
-    
-spring:
-  application:
-    name: SalaryServer-3
+server: 
+  port: 8003
+
+spring: 
   profiles: dev
-  
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-    register-with-eureka: true
-  instance:
+  applocation: 
+    name: salary-server-3-dev
+
+info: 
+ profile: dev
+ auctor: hddd
+ time: 2019-8-22
+
+eureka: 
+  instance: 
     prefer-ip-address: true
-    instance-id: salary-config-8003
+    instance-id: salary-server-8003
+  client: 
+    service-url: 
+     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/
 
-
- 
 ---
+server: 
+  port: 8003
 
-server:
-    port: 8003
-    
-spring:
-  application:
-    name: SalaryServer-3-test
+spring: 
   profiles: test
-  
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-    register-with-eureka: true
+  applocation: 
+    name: salary-server-3-test
+
+eureka: 
   instance:
     prefer-ip-address: true
-    instance-id: salary-config-8003-test
-
-
-
+    instance-id: salary-server-8003
+  client: 
+    service-url: 
+     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/
+info: 
+ profile: test
+ auctor: hddd
+ time: 2019-8-22
