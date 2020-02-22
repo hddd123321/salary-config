@@ -1,39 +1,39 @@
 spring:
-  profiles:
-    active:
-     - dev
+    profiles:
+        active:
+        - dev
 
 ---
 server:
-  port: 8003
+    port: 8003
 
 spring:
-  profiles: dev
-  application:
-    name: salary-8003
+    profiles: dev
+    application:
+        name: salary-8003
 
 
 eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: salary-8003
-  client:
-    service-url:
-     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/
+    instance:
+        prefer-ip-address: true
+        instance-id: salary-8003
+    client:
+        service-url:
+            defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/
 
 ---
 server:
-  port: 8003
+    port: 8003
 
 spring:
-  profiles: test
-  application:
-    name: salary-server-3-test
+    profiles: test
+    application:
+        name: salary-server-3-test
 
 eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: salary-server-8003
-  client:
-    service-url:
-     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/
+    instance:
+        prefer-ip-address: true
+        instance-id: salary-server-8003
+    client:
+        service-url:
+            defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7001.com:7001/eureka/
