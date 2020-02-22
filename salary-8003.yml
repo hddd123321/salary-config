@@ -1,6 +1,12 @@
 ---
 server:
     port: 8003
+    
+spring:
+  application:
+    name: SalaryServer-3
+  profiles: dev
+  
 eureka:
   client:
     service-url:
@@ -10,19 +16,18 @@ eureka:
     prefer-ip-address: true
     instance-id: salary-config-8003
 
-spring:
-  application:
-    name: SalaryServer-3
-  profiles: dev
 
-info:
-  aucrot: Hddd
-  time: 2020.2.22
  
 ---
 
 server:
     port: 8003
+    
+spring:
+  application:
+    name: SalaryServer-3-test
+  profiles: test
+  
 eureka:
   client:
     service-url:
@@ -32,11 +37,5 @@ eureka:
     prefer-ip-address: true
     instance-id: salary-config-8003-test
 
-spring:
-  application:
-    name: SalaryServer-3-test
-  profiles: test
 
-info:
-  aucrot: Hddd
-  time: 2020.2.22
+
