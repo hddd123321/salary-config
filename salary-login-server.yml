@@ -24,7 +24,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
-    name: SalaryServer-login
+    name: salary-login-server
   redis:
     host: 47.102.216.221
 
